@@ -128,9 +128,11 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   if (numero === 0   ||  numero === 1 || numero === 2) return false 
-  for (var i = 2; i <= numero-1 ;i++ ){if (numero%i === 0) {
-    return false}
-    return true
+  for (var i = 2; i <= numero-1 ;i++ ){
+    if (numero%i === 0) {
+      return false ; break} 
+      else return true
+
   }
 }
 
