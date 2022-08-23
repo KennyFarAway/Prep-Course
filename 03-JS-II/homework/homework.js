@@ -115,8 +115,8 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1===0 ||num2===0 ||num3===0) return "Error"
-  else if (num1>num2 &&num1>num3 &&num1>0) return "Número 1 es mayor y positivo"
   else if (num1<0 ||num2<0 ||num3<0 )return "Hay negativos"
+  else if (num1>num2 &&num1>num3 &&num1>0) return "Número 1 es mayor y positivo"
   else if (num3>num2 &&num3>num1)return num3+1
   else return false
 }
@@ -127,8 +127,8 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  for (var i = 2; i <= numero/2 ;i++ ){if (numero%i !== 0) return true
-  else return false}
+  for (var i = 2; i <= numero/2 ;i++ ){if (numero%i === 0) return false
+  else return true}
 }
 
 function esVerdadero(valor){
@@ -145,12 +145,13 @@ function tablaDelSeis(){
   //Escribe tu código aquí   
   var si = []
   for (var i = 0; i <= 10 ; i++ ) si.push(i*6)
+  return si
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero >= 100) return true
+  if (numero >= 100 && numero <= 999) return true
   else return false
 }
 
